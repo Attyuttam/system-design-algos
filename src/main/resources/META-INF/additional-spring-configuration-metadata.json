@@ -1,0 +1,27 @@
+{"properties": [
+  {
+    "name": "org.jobrunr.background-job-server.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'org.jobrunr.background-job-server.enabled'"
+  },
+  {
+    "name": "org.jobrunr.dashboard.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'org.jobrunr.dashboard.enabled'"
+  },
+  {
+    "name": "org.jobrunr.job-scheduler.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'org.jobrunr.job-scheduler.enabled'"
+  },
+  {
+    "name": "memory.storage.limit",
+    "type": "java.lang.String",
+    "description": "A description for 'memory.storage.limit'"
+  },
+  {
+    "name": "sorted.string.table.size.limit",
+    "type": "java.lang.String",
+    "description": "A description for 'sorted.string.table.size.limit'"
+  }
+]}
