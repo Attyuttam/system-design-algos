@@ -1,12 +1,16 @@
 package com.systemdesign.algo.application.storage;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import com.systemdesign.algo.domain.avl.AvlTree;
 import com.systemdesign.algo.domain.lsm.memtable.MemTableData;
+import com.systemdesign.algo.domain.lsm.memtable.MemTableUsingAvlTree;
 import com.systemdesign.algo.domain.lsm.sstable.SortedStringTable;
 
 import lombok.Getter;
@@ -24,10 +28,29 @@ public class DiskStorageService {
     private Integer sortedStringTableListSizeLimit;
 
     public void mergeSSTables(){
-        if(sortedStringTableList.size() >= sortedStringTableListSizeLimit){
-            //TODO: Write code to merge the SS tables
+        log.info("Size of LSM Tree before merging: "+this.sortedStringTableList.size());
+        while(sortedStringTableList.size() >= sortedStringTableListSizeLimit){
             log.info("Merging SS Tables");
+            Collections.sort(sortedStringTableList, new SSTComparator());
+            SortedStringTable mergedSST = mergeSSTables(sortedStringTableList.get(0), sortedStringTableList.get(1));
+            sortedStringTableList.remove(0);
+            sortedStringTableList.remove(1);
+            sortedStringTableList.add(mergedSST);
         }
+        log.info("Size of LSM Tree after merging: "+this.sortedStringTableList.size());
+    }
+
+    private SortedStringTable mergeSSTables(SortedStringTable sortedStringTable1, SortedStringTable sortedStringTable2) {
+        List<MemTableData> sortedStringTable1Contents = sortedStringTable1.getMemTable().performDeepCopy().traverse();
+        List<MemTableData> sortedStringTable2Contents = sortedStringTable2.getMemTable().performDeepCopy().traverse();
+        
+        AvlTree<MemTableData> avlTree = new AvlTree<>();
+        sortedStringTable1Contents.forEach(sst -> avlTree.insert(sst));
+        sortedStringTable2Contents.forEach(sst -> avlTree.insert(sst));
+
+        MemTableUsingAvlTree<MemTableData> memTableUsingAvlTree = new MemTableUsingAvlTree<>(avlTree);
+        SortedStringTable mergedSortedStringTable = new SortedStringTable(memTableUsingAvlTree);
+        return mergedSortedStringTable;
     }
 
     public void addToSSTableList(SortedStringTable sst){
@@ -62,4 +85,15 @@ public class DiskStorageService {
             if(deleted)return;
         }
     }
+}
+
+class SSTComparator implements Comparator<SortedStringTable>{
+
+    @Override
+    public int compare(SortedStringTable sst1, SortedStringTable sst2) {
+        if(sst1.getMemTable().size() == sst2.getMemTable().size())return 0;
+        if(sst1.getMemTable().size() < sst2.getMemTable().size()) return -1;
+        return 1;
+    }
+
 }
