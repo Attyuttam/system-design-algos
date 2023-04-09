@@ -1,17 +1,17 @@
-package com.systemdesign.algo.application.storage;
+package com.systemdesign.algo.lsmtreealgo.application.storage;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import com.systemdesign.algo.application.storage.exception.DataInsertIntoStorageException;
-import com.systemdesign.algo.application.storage.exception.DataTransferException;
-import com.systemdesign.algo.domain.lsm.memtable.MemTable;
-import com.systemdesign.algo.domain.lsm.memtable.MemTableData;
-import com.systemdesign.algo.domain.lsm.sstable.SortedStringTable;
-import com.systemdesign.algo.domain.tree.Tree;
-import com.systemdesign.algo.domain.tree.TreeNode;
+import com.systemdesign.algo.lsmtreealgo.application.storage.exception.DataInsertIntoStorageException;
+import com.systemdesign.algo.lsmtreealgo.application.storage.exception.DataTransferException;
+import com.systemdesign.algo.lsmtreealgo.domain.lsm.memtable.MemTable;
+import com.systemdesign.algo.lsmtreealgo.domain.lsm.memtable.MemTableData;
+import com.systemdesign.algo.lsmtreealgo.domain.lsm.sstable.SortedStringTable;
+import com.systemdesign.algo.lsmtreealgo.domain.tree.Tree;
+import com.systemdesign.algo.lsmtreealgo.domain.tree.TreeNode;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

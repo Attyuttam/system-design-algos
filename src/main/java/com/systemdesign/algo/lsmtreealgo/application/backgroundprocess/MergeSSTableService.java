@@ -1,10 +1,10 @@
-package com.systemdesign.algo.application.backgroundprocess;
+package com.systemdesign.algo.lsmtreealgo.application.backgroundprocess;
 
 import org.jobrunr.jobs.annotations.Job;
 import org.jobrunr.spring.annotations.Recurring;
 import org.springframework.stereotype.Component;
 
-import com.systemdesign.algo.application.storage.DiskStorageService;
+import com.systemdesign.algo.lsmtreealgo.application.storage.DiskStorageService;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

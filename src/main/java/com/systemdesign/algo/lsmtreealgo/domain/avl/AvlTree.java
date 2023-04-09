@@ -1,12 +1,12 @@
-package com.systemdesign.algo.domain.avl;
+package com.systemdesign.algo.lsmtreealgo.domain.avl;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.systemdesign.algo.domain.tree.Tree;
-import com.systemdesign.algo.domain.tree.TreeNode;
+import com.systemdesign.algo.lsmtreealgo.domain.tree.Tree;
+import com.systemdesign.algo.lsmtreealgo.domain.tree.TreeNode;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;

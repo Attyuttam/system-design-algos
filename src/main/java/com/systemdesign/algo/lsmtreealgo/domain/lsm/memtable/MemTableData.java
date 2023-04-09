@@ -1,4 +1,4 @@
-package com.systemdesign.algo.domain.lsm.memtable;
+package com.systemdesign.algo.lsmtreealgo.domain.lsm.memtable;
 
 import lombok.Builder;
 import lombok.Data;

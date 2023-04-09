@@ -1,11 +1,11 @@
-package com.systemdesign.algo.application.backgroundprocess;
+package com.systemdesign.algo.lsmtreealgo.application.backgroundprocess;
 
 import org.jobrunr.jobs.annotations.Job;
 import org.jobrunr.spring.annotations.Recurring;
 import org.springframework.stereotype.Component;
 
-import com.systemdesign.algo.application.storage.InMemoryStorageService;
-import com.systemdesign.algo.application.storage.exception.DataTransferException;
+import com.systemdesign.algo.lsmtreealgo.application.storage.InMemoryStorageService;
+import com.systemdesign.algo.lsmtreealgo.application.storage.exception.DataTransferException;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

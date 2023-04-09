@@ -1,4 +1,4 @@
-package com.systemdesign.algo.application.storage;
+package com.systemdesign.algo.lsmtreealgo.application.storage;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,10 +8,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import com.systemdesign.algo.domain.avl.AvlTree;
-import com.systemdesign.algo.domain.lsm.memtable.MemTableData;
-import com.systemdesign.algo.domain.lsm.memtable.MemTableUsingAvlTree;
-import com.systemdesign.algo.domain.lsm.sstable.SortedStringTable;
+import com.systemdesign.algo.lsmtreealgo.domain.avl.AvlTree;
+import com.systemdesign.algo.lsmtreealgo.domain.lsm.memtable.MemTableData;
+import com.systemdesign.algo.lsmtreealgo.domain.lsm.memtable.MemTableUsingAvlTree;
+import com.systemdesign.algo.lsmtreealgo.domain.lsm.sstable.SortedStringTable;
 
 import lombok.Getter;
 import lombok.Setter;

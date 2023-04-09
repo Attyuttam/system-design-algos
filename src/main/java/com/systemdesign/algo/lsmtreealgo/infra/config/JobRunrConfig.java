@@ -1,4 +1,4 @@
-package com.systemdesign.algo.infra.config;
+package com.systemdesign.algo.lsmtreealgo.infra.config;
 
 import org.jobrunr.jobs.mappers.JobMapper;
 import org.jobrunr.storage.InMemoryStorageProvider;

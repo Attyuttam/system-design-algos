@@ -1,12 +1,12 @@
-package com.systemdesign.algo.domain.lsm.sstable;
+package com.systemdesign.algo.lsmtreealgo.domain.lsm.sstable;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.systemdesign.algo.domain.lsm.memtable.MemTable;
-import com.systemdesign.algo.domain.lsm.memtable.MemTableData;
+import com.systemdesign.algo.lsmtreealgo.domain.lsm.memtable.MemTable;
+import com.systemdesign.algo.lsmtreealgo.domain.lsm.memtable.MemTableData;
 
 import lombok.Data;
 

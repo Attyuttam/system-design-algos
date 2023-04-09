@@ -1,4 +1,4 @@
-package com.systemdesign.algo.infra.controller;
+package com.systemdesign.algo.lsmtreealgo.infra.controller;
 
 import java.util.List;
 
@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.systemdesign.algo.application.storage.InMemoryStorageService;
-import com.systemdesign.algo.application.storage.exception.DataDeleteFromStorageException;
-import com.systemdesign.algo.application.storage.exception.DataInsertIntoStorageException;
-import com.systemdesign.algo.domain.lsm.memtable.MemTableData;
-import com.systemdesign.algo.domain.lsm.sstable.SortedStringTable;
-import com.systemdesign.algo.domain.tree.Tree;
+import com.systemdesign.algo.lsmtreealgo.application.storage.InMemoryStorageService;
+import com.systemdesign.algo.lsmtreealgo.application.storage.exception.DataDeleteFromStorageException;
+import com.systemdesign.algo.lsmtreealgo.application.storage.exception.DataInsertIntoStorageException;
+import com.systemdesign.algo.lsmtreealgo.domain.lsm.memtable.MemTableData;
+import com.systemdesign.algo.lsmtreealgo.domain.lsm.sstable.SortedStringTable;
+import com.systemdesign.algo.lsmtreealgo.domain.tree.Tree;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

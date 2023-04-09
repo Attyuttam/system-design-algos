@@ -1,4 +1,4 @@
-package com.systemdesign.algo.domain.tree;
+package com.systemdesign.algo.lsmtreealgo.domain.tree;
 
 
 import lombok.AllArgsConstructor;

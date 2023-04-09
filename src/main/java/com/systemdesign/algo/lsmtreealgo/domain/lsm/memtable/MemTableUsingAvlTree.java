@@ -1,11 +1,11 @@
-package com.systemdesign.algo.domain.lsm.memtable;
+package com.systemdesign.algo.lsmtreealgo.domain.lsm.memtable;
 
 import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.systemdesign.algo.domain.tree.Tree;
-import com.systemdesign.algo.domain.tree.TreeNode;
+import com.systemdesign.algo.lsmtreealgo.domain.tree.Tree;
+import com.systemdesign.algo.lsmtreealgo.domain.tree.TreeNode;
 
 @Component
 public class MemTableUsingAvlTree<T extends Comparable<T>> implements MemTable{
