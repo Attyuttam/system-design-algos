@@ -1,7 +1,7 @@
 # system-design-algos
 Implementing various system design algorithms that I come across
 
-## 1. LSM Tree 
+## LSM Tree 
 Here I have implemented an LSM tree which is capable of the following:
 1. Inserting into the memory(implemented using AVL tree)
 2. Search a data (searches memory and if unavailable then searches in the disk)
