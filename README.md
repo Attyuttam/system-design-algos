@@ -16,9 +16,12 @@ Here I have implemented an LSM tree which is capable of the following:
 2. JobRunr: https://www.jobrunr.io/en/ (To run jobs in the bakcground)
 3. MemTable: https://www.mauriciopoppe.com/notes/computer-science/data-structures/memtable-sstable/
 4. SS Table: https://www.mauriciopoppe.com/notes/computer-science/data-structures/memtable-sstable/
+5. Sparse Index: 
+    Sparse indexing allows you to specify the conditions under which a pointer segment is suppressed, not generated, and put in the index database. Sparse indexing has two advantages. The primary one is that it reduces the size of the index, saving space and decreasing maintenance of the index.
 
 ### Available APIs
 Please check com.systemdesign.algo.lsmtreealgo.infra.controller.StorageController
 
 ### Current issues
-SS Table should be immutable, but I have made it mutable, need to fix that
+1. SS Table should be immutable, but I have made it mutable, need to fix that
+2. Need a Bloom filter to search in the SS Tables
