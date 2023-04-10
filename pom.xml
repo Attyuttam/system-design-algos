@@ -19,6 +19,11 @@
   </build>
   <dependencies>
     <dependency>
+      <artifactId>guava</artifactId>
+      <groupId>com.google.guava</groupId>
+      <version>31.0.1-jre</version>
+    </dependency>
+    <dependency>
       <artifactId>jackson-databind</artifactId>
       <groupId>com.fasterxml.jackson.core</groupId>
       <version>2.13.5</version>

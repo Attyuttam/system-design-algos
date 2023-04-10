@@ -24,4 +24,3 @@ Please check com.systemdesign.algo.lsmtreealgo.infra.controller.StorageControlle
 
 ### Current issues
 1. SS Table should be immutable, but I have made it mutable, need to fix that
-2. Need a Bloom filter to search in the SS Tables

@@ -31,7 +31,8 @@ public class SortedStringTable {
 
     public MemTableData getData(MemTableData searchMemTableData){
         //Use sparse index to check if the data is even present in this SSTable
-
+        //TODO: use a bloom filter rather than a sparse index
+        
         if(this.sparseIndex.get(0).getKey().compareTo(searchMemTableData.getKey()) <= 0 && this.sparseIndex.get(1).getKey().compareTo(searchMemTableData.getKey()) >= 0){
             return this.memTable.search(searchMemTableData).getData();
         }
