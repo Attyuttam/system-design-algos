@@ -15,8 +15,8 @@ import lombok.extern.slf4j.Slf4j;
 public class MergeSSTableService {
     private final DiskStorageService diskStorageService;
 
-    @Job(name="Job for merging SS Tables", retries=2)
-    @Recurring(id = "merge-ss-tables-recurring-job", cron = "*/10 * * * *")
+    //@Job(name="Job for merging SS Tables", retries=2)
+    //@Recurring(id = "merge-ss-tables-recurring-job", cron = "*/10 * * * *")
     public void mergeSSTables(){
         log.info("Merging SS Tables");
         diskStorageService.mergeSSTables();

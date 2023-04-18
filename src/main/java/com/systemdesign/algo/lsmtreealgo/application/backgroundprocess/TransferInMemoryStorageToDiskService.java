@@ -16,8 +16,8 @@ import lombok.extern.slf4j.Slf4j;
 public class TransferInMemoryStorageToDiskService {
     private final InMemoryStorageService inMemoryStorageService;
 
-    @Job(name="Job for transferring data from memory to disk", retries=2)
-    @Recurring(id = "transfer-memory-data-to-disk-recurring-job", cron = "*/5 * * * *")
+    //@Job(name="Job for transferring data from memory to disk", retries=2)
+    //@Recurring(id = "transfer-memory-data-to-disk-recurring-job", cron = "*/5 * * * *")
     public void transferInMemoryDataToDisk() throws DataTransferException{
         log.info("Transferring data from memory to disk");
         this.inMemoryStorageService.transferMemTableToDisk();
